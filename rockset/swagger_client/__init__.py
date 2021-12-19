@@ -132,4 +132,3 @@ from rockset.swagger_client.models.user import User
 from rockset.swagger_client.models.validate_query_response import ValidateQueryResponse
 from rockset.swagger_client.models.workspace import Workspace
 from rockset.swagger_client.models.xml_params import XmlParams
-

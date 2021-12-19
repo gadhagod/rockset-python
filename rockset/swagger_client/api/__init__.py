@@ -12,4 +12,3 @@ from rockset.swagger_client.api.queries_api import QueriesApi
 from rockset.swagger_client.api.query_lambdas_api import QueryLambdasApi
 from rockset.swagger_client.api.users_api import UsersApi
 from rockset.swagger_client.api.workspaces_api import WorkspacesApi
-

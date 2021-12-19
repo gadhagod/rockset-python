@@ -45,7 +45,7 @@ def check_for_updates():
     return '{} (latest)'.format(installed_version)
 
 
-def version():
+"""def version():
     version_file = pkg_resources.resource_filename('rockset', 'version.json')
     try:
         with open(version_file, 'r') as vf:
@@ -58,10 +58,10 @@ def version():
             'please uninstall and reinstall package "rockset"'
         ) from e
 
-    return version
+    return version"""
 
 
-__version__ = version()
+#__version__ = version()
 
 __all__ = [
     "Client",

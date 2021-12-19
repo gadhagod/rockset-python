@@ -208,7 +208,7 @@ class Client(object):
         self.api_client = ApiClient(
             api_key=self.api_key,
             api_server=self.api_server,
-            version=rockset.version(),
+            version="",
             user_agent=self.user_agent,
             configuration=configuration
         )

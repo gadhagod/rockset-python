@@ -73,7 +73,7 @@ class ApiClient(object):
         if header_name is not None:
             self.default_headers[header_name] = header_value
         self.default_headers["Authorization"] = "ApiKey " + api_key
-        self.default_headers["x-rockset-version"] = version
+        #self.default_headers["x-rockset-version"] = version
         self.default_headers["User-Agent"] = user_agent
         self.cookie = cookie
 
