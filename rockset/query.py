@@ -906,6 +906,16 @@ def _escape_chars(v, chars=set()):
         v = v.replace(c, r"\{}".format(c))
     return v
 
+def _escape_chars_using_quote(v, chars=set()):
+    """
+    places a single quote before a given character in a string
+
+    EXAMPLE: `_escape_chars_using_quote("x's", "'")` returns "x''s"
+    """
+    for c in set(chars):
+        v = v.replace(c, r"'{}".format(c))
+    return v
+
 
 class SQLSelect(object):
     def __init__(self, params=None, default_alias=None):
@@ -1571,7 +1581,7 @@ class Literal(BaseRef):
 
     def sqlexpression(self, **kwargs):
         if isinstance(self.value, str):
-            return "'{}'".format(_escape_chars(self.value, "'"))
+            return "'{}'".format(_escape_chars_using_quote(self.value, "'"))
         elif isinstance(self.value, datetime.datetime):
             if self.value.tzinfo is None:
                 return "DATETIME '{}'".format(_sqlexp(self.value))
